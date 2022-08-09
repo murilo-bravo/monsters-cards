@@ -2,7 +2,7 @@ import { Component } from 'react'
 // import logo from './logo.svg'
 import './App.css'
 import CardList from './components/card-list/card-list.component'
-import SearchBox from './components/card-list/search-box/search-box.component'
+import SearchBox from './components/search-box/search-box.component'
 
 class App extends Component {
   constructor() {
@@ -51,20 +51,12 @@ class App extends Component {
 
     return (
       <div className="App">
-        
-        {/* {filteredMonsters.map(monster => {
-          return (
-            //use 'key' on map to identify each result, set a id in every monster will make them unique
-            <div key={monster.id}>
-              <h1>{monster.name}</h1>
-            </div>
-          );
-        })}; */}
-        <SearchBox 
+        <h1 className='app-title'>Monsters</h1>
+        <SearchBox
           onChangeHandler={onSearchChange}
-          placeholder='Search Monsters...'
-          className='search-box'
-          />
+          placeholder="Search Monsters..."
+          className="monsters-search-box"
+        />
         <CardList monsters={filteredMonsters} />
       </div>
     )
